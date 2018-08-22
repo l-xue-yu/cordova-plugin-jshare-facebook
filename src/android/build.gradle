@@ -1,0 +1,13 @@
+repositories {
+    jcenter()
+}
+
+android {
+    defaultConfig{
+        manifestPlaceholders.FACEBOOK_APPID = cdvHelpers.getConfigPreference ('FACEBOOK_APPID', "")
+    }
+}
+
+dependencies {
+    compile 'cn.jiguang.sdk:jshare-facebookmodel:1.6.0'
+}

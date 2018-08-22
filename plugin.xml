@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-jshare-facebook" version="1.0.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>JShareFacebook</name>
+    <js-module name="JShareFacebook" src="www/JShareFacebook.js">
+        <clobbers target="cordova.plugins.JShareFacebook" />
+    </js-module>
+    
+    <preference name="FACEBOOK_APPID" />
+    <preference name="FACEBOOK_APPNAME" />
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="JShareFacebook">
+                <param name="android-package" value="com.zgwit.jshare.JShareFacebook" />
+            </feature>
+            <preference name="FACEBOOK_APPID" value="$FACEBOOK_APPID" />
+            <preference name="FACEBOOK_APPNAME" value="$FACEBOOK_APPNAME" />
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/JShareFacebook.java" target-dir="src/com/zgwit/jshare" />
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+    </platform>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="JShareFacebook">
+                <param name="ios-package" value="JShareFacebook" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/JShareFacebook.m" />
+    </platform>
+</plugin>
