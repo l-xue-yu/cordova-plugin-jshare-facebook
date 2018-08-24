@@ -3,9 +3,6 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>JShareFacebook</name>
-    <js-module name="JShareFacebook" src="www/JShareFacebook.js">
-        <clobbers target="cordova.plugins.JShareFacebook" />
-    </js-module>
 
   <!--添加jcore依赖-->
   <dependency id="cordova-plugin-jshare" />

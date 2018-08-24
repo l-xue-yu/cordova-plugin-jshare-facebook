@@ -1,11 +1,15 @@
 {
   "name": "cordova-plugin-jshare-facebook",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "share facebook for cordova plugin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "jshare-Facebook",
+    "cordova-android"
+  ],
   "author": "",
   "license": "ISC"
 }
